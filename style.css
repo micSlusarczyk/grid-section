@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 13px;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+}
+
+a{
+    text-decoration: none;
+    color:hsl(219, 29%, 14%);
+}
+
+.main-card {
+    width: 1120px;
+    height: 600px;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.main-card .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 2.6rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
+}
+
+.main-card .card .user {
+    display: flex;
+    align-items: center;
+}
+
+.main-card .card .user img {
+    width: 2.4rem;
+    border-radius: 50%;
+}
+
+.main-card .card .user h5 {
+    margin-left: 1.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    line-height: 1.1rem;
+}
+
+.main-card .card .user h5 span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.main-card .card .title {
+    margin: 1rem 0;
+    font-size: 1.55rem;
+    letter-spacing: 0.005rem;
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+.main-card .card .description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: hsl(0, 0%, 70%);
+    letter-spacing: 0.005rem;
+}
+
+.main-card .card:nth-child(1) {
+    width: 100%;
+    background: url("./images/bg-pattern-quotation.svg");
+    background-color: hsl(263, 55%, 52%);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: 82%;
+    grid-column: span 2;
+}
+
+.main-card .card:nth-child(1) .user img {
+    border: 2px solid hsl(0, 0%, 70%);
+}
+
+.main-card .card:nth-child(2) {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.main-card .card:nth-child(2) .user img {
+    border: 2px solid hsl(0, 0%, 70%);
+}
+
+.main-card .card:nth-child(3) {
+    background-color: hsl(0, 0%, 100%);
+    grid-row: span 2;
+    box-shadow: 15px 15px 30px hsl(0, 0%, 85%);
+    color: hsl(217, 19%, 35%);
+}
+.main-card .card:nth-child(4) {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 15px 15px 30px hsl(0, 0%, 85%);
+    color: hsl(217, 19%, 35%);
+}
+
+.main-card .card:nth-child(5) {
+    background-color: hsl(219, 29%, 14%);
+    grid-column: span 2;
+}
+
+.main-card .card:nth-child(5) .user img {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+
+.attribution {
+    position: absolute;
+    color: hsl(263, 55%, 52%);
+    bottom: 50px;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 0 2rem;
+    }
+    .main-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-card .card {
+        padding: 2.2rem;
+    }
+
+    .main-card .card:nth-child(1) {
+        order: 1;
+        background-position-x: 90%;
+    }
+    .main-card .card:nth-child(2) {
+        order: 2;
+    }
+    .main-card .card:nth-child(3) {
+        order: 5;
+    }
+    .main-card .card:nth-child(4) {
+        order: 3;
+    }
+    .main-card .card:nth-child(5) {
+        order: 4;
+    }
+    .main-card .card .description {
+        font-size: 1rem;
+        letter-spacing: 0.01rem;
+    }
+    .main-card .card:nth-child(1) .description {
+        margin-right: 1rem;
+    }
+    .main-card .card:nth-child(3) .description {
+        margin-right: 0.3rem;
+        letter-spacing: 0rem;
+    }
+    .main-card .card:nth-child(4) .description {
+        margin-right: 1rem;
+    }
+    .attribution{
+        display: none;
+    }
+}
